@@ -1,2 +1,5 @@
 # debug-tests
-Workshop: how to debug automated tests
+
+Workshop: "How to debug automated tests"
+
+This workshop consists of several subprojects, each is a separate problem to solve. 
