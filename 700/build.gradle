@@ -1,0 +1,25 @@
+apply plugin: 'java'
+
+defaultTasks 'test'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'org.xhtmlrenderer:flying-saucer-pdf-openpdf:9.2.2'
+  testImplementation('com.codeborne:pdf-test:1.8.1')
+  testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+  testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+  testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
+  testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.9'
+}
+
+test {
+  useJUnitPlatform()
+  testLogging.showStandardStreams = true
+  outputs.upToDateWhen { false }
+  maxHeapSize = "128m"
+}
+
+
